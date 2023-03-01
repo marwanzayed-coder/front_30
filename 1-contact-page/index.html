@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us | FrontEnd 30</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <main>
+      <!-- Start Head -->
+      <div class="head">
+        <h1>Contact Us</h1>
+        <p>Contact Us, We Are Always Available.</p>
+      </div>
+      <!-- End Head -->
+      <!-- Start Form -->
+      <form class="form" id="form">
+        <div>
+          <input type="text" id="name" name="name" autocomplete="off" />
+          <label for="name">Your Name <span>*</span></label>
+        </div>
+        <div>
+          <input type="text" id="email" name="email" autocomplete="off" />
+          <label for="email">Email <span>*</span></label>
+        </div>
+        <div>
+          <input type="text" id="phone" name="phone" autocomplete="off" />
+          <label for="phone">Phone Number (Egyptian Only)</label>
+        </div>
+        <div>
+          <textarea
+            id="msg"
+            rows="5"
+            name="message"
+            autocomplete="off"
+          ></textarea>
+          <label for="msg">Your Message <span>*</span></label>
+        </div>
+        <button type="submit">Contact</button>
+      </form>
+      <!-- End Form -->
+    </main>
+    <div id="popupContainer"></div>
+    <script src="js/main.js"></script>
+  </body>
+</html>

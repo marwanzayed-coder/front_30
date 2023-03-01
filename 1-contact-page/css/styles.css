@@ -1,0 +1,154 @@
+:root {
+  --main-color: #4db5ff;
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: aqua;
+  font-family: "Open Sans", sans-serif;
+  background-image: url(../images/background.jpg);
+  position: relative;
+}
+body::after {
+  content: "";
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgb(31, 31, 56);
+  opacity: 0.93;
+  z-index: -1;
+}
+main {
+  background-color: rgba(0, 0, 0, 0.3);
+  padding: 32px;
+  text-align: center;
+  color: #fff;
+  border-radius: 16px;
+}
+/* Start Head */
+.head h1 {
+  margin-bottom: 16px;
+  font-size: 2.4rem;
+  color: var(--main-color);
+}
+.head p {
+  color: #ccc;
+}
+/* End Head */
+/* Start Form */
+.form {
+  margin-top: 16px;
+  width: 600px;
+}
+@media (max-width: 650px) {
+  .form {
+    width: 100%;
+  }
+}
+.form > div {
+  position: relative;
+  margin: 20px 0;
+}
+.form label {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  transition: all 0.1s linear;
+  cursor: pointer;
+}
+.form label span {
+  color: var(--main-color);
+}
+.form input,
+.form textarea {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  border-bottom: 1px solid var(--main-color);
+  color: var(--main-color);
+  font-size: 17px;
+}
+.form input:focus + label,
+.form input.open + label {
+  bottom: 30px;
+}
+.form textarea {
+  resize: none;
+}
+.form textarea + label {
+  top: 10px;
+}
+.form textarea:focus + label,
+.form textarea.open + label {
+  top: -10px;
+}
+.form button {
+  width: 100%;
+  padding: 10px;
+  background-color: transparent;
+  border: 1px solid var(--main-color);
+  border-radius: 8px;
+  color: var(--main-color);
+  font-size: 18px;
+  transition: all 0.3s linear;
+  cursor: pointer;
+}
+.form button:hover {
+  background-color: var(--main-color);
+  color: #fff;
+}
+/* End Form */
+/* Start Popup */
+#popupContainer {
+  position: absolute;
+  left: 50%;
+  top: 20px;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.popup {
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 10px;
+  width: 50%;
+  margin-left: 25%;
+  text-align: center;
+  font-family: sans-serif;
+  z-index: 100;
+  color: #fff;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+@media (max-width: 767px) {
+  .popup {
+    width: 90%;
+    margin-left: 5%;
+  }
+}
+.popup button {
+  border: none;
+  outline: none;
+  width: 100%;
+  height: 30px;
+  border-radius: 6px;
+  background-color: var(--main-color);
+  color: #fff;
+  cursor: pointer;
+  margin-top: 10px;
+}
+.popup h2 {
+  color: var(--main-color);
+  margin-bottom: 10px;
+}
+/* End Popup */
