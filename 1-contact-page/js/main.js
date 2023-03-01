@@ -9,7 +9,7 @@ function sendData(e) {
     popup("Oops Can't Send Data", "You must write your email");
   }
   let regEx = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-  if (!regEx.test(e.target[1].value)) {
+  if (e.target[1].value.length > 0 && !regEx.test(e.target[1].value)) {
     popup("Oops Can't Send Data", "You Have Entered An Invalid Email Address!");
   }
   if (e.target[2].value.length > 0) {
