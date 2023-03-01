@@ -13,21 +13,21 @@ function sendData(e) {
     !regExEmail.test(e.target[1].value)
   ) {
     popup("Oops Can't Send Data", "You Have Entered An Invalid Email Address!");
-  } else if (e.target[2].value.length > 0) {
-    let regExPhone = /^01[0125][0-9]{8}$/gm;
-    if (!regExPhone.test(e.target[2].value)) {
-      popup(
-        "Oops Can't Send Data",
-        "You Have Entered An Invalid Phone Number!"
-      );
-    }
-  } else if (e.target[3].value.length == 0) {
+  } else if (e.target[2].value.length == 0) {
     popup("Oops Can't Send Data", "You must write your Message");
   } else {
+    let data = {
+      name: e.target[0].value,
+      email: e.target[1].value,
+      message: e.target[2].value,
+    };
     let lenght = e.target.length - 1;
     for (let i = 0; i <= lenght; i++) {
       e.target[i].value = "";
     }
+
+    console.log(data);
+    return data;
   }
 }
 let inputs = document.querySelectorAll(".form input");
